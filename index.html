@@ -1,1 +1,51 @@
-
+<html>
+    <head>
+        <title>WareOS</title>
+        <meta name="theme-color" content="#787878"/>
+        <meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0'>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="site.webmanifest" rel="manifest">
+        <link href="index.css" rel="stylesheet">
+        <script src="index.js"></script>
+        <script>
+            var domains = {
+                "wareos.github.io": "/"
+            };
+            var base = document.createElement('base');
+            var template = document.head.querySelector('template');
+            var host = window.location.host;
+            var origin = window.location.origin;
+            base.href = origin + domains[host] + "/";
+            document.head.querySelector('script').insertAdjacentHTML("afterend", base.outerHTML);
+            base = document.head.querySelector('script').nextElementSibling;
+            //console.log(base, template);
+            //base.insertAdjacentHTML("afterend", template.content.firstElementChild.innerHTML);
+        </script>
+    </head>
+    <body>
+        <my>
+            <avi>
+                <picture></picture>
+                <picture></picture>
+            </avi>
+            <form>
+                <input type="text">
+            </form>
+        </my>
+        <time>
+            <clock></clock>
+        </time>
+        <main>
+            <section>
+                <section class="component component-home" route="/"></section>
+            </section>
+        </main>
+        <user>
+            <picture></picture>
+        </user>
+        <brand>
+            <picture></picture>
+        </brand>
+    </body>
+</html>
